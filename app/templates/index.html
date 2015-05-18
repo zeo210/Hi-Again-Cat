@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+{% if source %}
+Try something other than Index
+{% endif %}
+
+<body>
+    <a href="{{ url_for('search') }}" >The search form</a>
+</body>
+</html>

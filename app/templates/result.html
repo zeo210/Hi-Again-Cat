@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cat {{ cat_number }}</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+{% if source %}
+{% raw %}
+Try something other than a number
+{% endraw %}
+{% endif %}
+
+<body>
+    {% if source %}
+    {% raw %}
+    <img src="{{ url_for('static', filename=cat_number+'.jpg')}}">
+    <a href="{{ url_for('search') }}">Search again</a>
+    {% endraw %}
+    {% else %}
+    <img src="{{ url_for('static', filename=cat_number+'.jpg')}}">
+    <a href="{{ url_for('search') }}">Search again</a>
+    {% endif %}
+</body>
+</html>
