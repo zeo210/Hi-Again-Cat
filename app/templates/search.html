@@ -44,12 +44,12 @@
         {% raw %}
         {{ form.csrf_token }}
         Enter a string to search<br>
-        (try a number greater than or equal to 0) {{ form.search }}
+        (Ex: try a number greater than or equal to 0) {{ form.search }}
         {% endraw %}
         {% else %}
         {{ form.csrf_token }}
         Enter a string to search<br>
-        (try a number greater than or equal to 0) {{ form.search }}
+        (Ex: try a number greater than or equal to 0) {{ form.search }}
         {% endif %}
         <input type="submit">
     </form>

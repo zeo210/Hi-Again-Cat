@@ -30,6 +30,6 @@ def search():
         if input.isdigit():
             print("return page mod number")
             return render_template('result.html', cat_number=str(int(input)%10) , source=False)
-        flash("invalid query")
+        flash("Invalid query. Maybe you should look at the puzzle description again.")
     return render_template('search.html',
                            form=form)
